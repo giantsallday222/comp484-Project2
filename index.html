@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Giga Pet</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+    <div class="device">
+
+      <!-- Top curved strip with title -->
+      <header>
+        <h1>🐾 Your Giga Pet</h1>
+      </header>
+
+      <!-- Screen area -->
+      <main>
+        <section class="pet-image-container">
+
+          <img class="pet-image" src="dogimage.jpeg" alt="My Giga Pet">
+        </section>
+
+        <section class="dashboard">
+          <div class="stat">
+            <span class="stat-label">Name</span>
+            <span class="stat-value"><span class="name"></span></span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Weight</span>
+            <span class="stat-value"><span class="weight"></span> lbs</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Happiness</span>
+            <span class="stat-value"><span class="happiness"></span> wags/min</span>
+          </div>
+    
+          <div class="stat">
+            <span class="stat-label">Energy</span>
+            <span class="stat-value"><span class="energy"></span> / 100</span>
+          </div>
+        </section>
+      </main>
+
+      <div class="button-container">
+        <button class="treat-button">🍖 Treat</button>
+        <button class="play-button">🎾 Play</button>
+        <button class="exercise-button">🏃 Exercise</button>
+        <!-- New action button -->
+        <button class="sleep-button">💤 Sleep</button>
+      </div>
+
+      <!-- Visual notification area where the pet "talks" after each button press -->
+      <div class="pet-message"></div>
+
+    </div><!-- end .device -->
+
+  </body>
+</html>
