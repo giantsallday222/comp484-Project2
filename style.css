@@ -1,9 +1,3 @@
-/* ========================================================
-   GIGA PET — Retro-Toy Device Aesthetic
-   Fonts: Fredoka (display) + Nunito (body)
-   Palette: warm cream shell, teal screen, coral accents
-   ======================================================== */
-
 /* --- CSS Variables for consistency --- */
 :root {
   --shell-bg: #f4e8d3;
@@ -79,7 +73,6 @@ body {
   }
 }
 
-/* Small decorative screw dots in corners */
 .device::before,
 .device::after {
   content: '';
@@ -143,7 +136,6 @@ main {
   transition: transform 0.15s ease;
 }
 
-/* --- Dashboard stats --- */
 .dashboard {
   flex: 1;
   display: flex;
