@@ -2,8 +2,10 @@ $(function () {
 
   checkAndUpdatePetInfoInHtml();
 
-  // Writes data onto the element instead of in html
-  // Using any stored data from previous to use it here so you can continue the previous session without restarting.
+  // .data(key, value) is the jQuery method that attaches data directly to a DOM element's
+// internal storage without modifying the HTML. Unlike data-* attributes, it can store
+// any JavaScript type including objects. Here we save a snapshot of the pet's current
+// stats so we can compare them after a button click to calculate what changed.
  
   $('.pet-image').data('previousStats', {
     happiness: pet_info.happiness,
@@ -126,7 +128,11 @@ function computeAndStoreStatDeltas() {
   return changes.length ? '(' + changes.join(', ') + ')' : '';
 }
 
-//This .finish() function allows me to spam click any button and not have the messages overlap even though there are delays.
+// .finish() instantly jumps all queued animations to their final state and empties
+// the queue. This prevents the speech bubble from flickering or showing stale text
+// when buttons are clicked rapidly. Unlike .stop(), which only halts the current
+// animation mid-frame, .finish() resolves everything and guarantees a clean slate.
+
 function showPetMessage(message) {
   $('.pet-message')
     .finish()                // <-- UNIQUE METHOD #2: clears queue + jumps to end state
